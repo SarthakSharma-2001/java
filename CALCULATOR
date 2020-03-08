@@ -1,0 +1,65 @@
+import java.util.Scanner;
+
+public class calculator {
+    Scanner sc = new Scanner(System.in);
+    void multiplication(){
+        System.out.print("ENTER FIRST NO = ");
+        int n1 = sc.nextInt();
+        System.out.print("ENTER SECOND NO = ");
+        int n2 = sc.nextInt();
+        System.out.println("THE RESULT IS = "+(n1*n2));
+    }
+    void division(){
+        System.out.print("ENTER FIRST NO = ");
+        int n1 = sc.nextInt();
+        System.out.print("ENTER SECOND NO = ");
+        int n2 = sc.nextInt();
+        System.out.println("THE RESULT IS = "+(n1/n2));
+    }
+    void addition(){
+        System.out.print("ENTER FIRST NO = ");
+        int n1 = sc.nextInt();
+        System.out.print("ENTER SECOND NO = ");
+        int n2 = sc.nextInt();
+        System.out.println("THE RESULT IS = "+(n1+n2));
+    }
+    void substractiion(){
+        System.out.print("ENTER FIRST NO = ");
+        int n1 = sc.nextInt();
+        System.out.print("ENTER SECOND NO = ");
+        int n2 = sc.nextInt();
+        System.out.println("THE RESULT IS = "+(n1-n2));
+    }
+    public static void main(String args[]){
+        calculator obj = new calculator();
+        while(true){
+            System.out.println("Press 1 for MULTIPLICATION.");
+            System.out.println("Press 2 for DIVISION.");
+            System.out.println("Press 3 for ADDITION.");
+            System.out.println("Press 4 for SUBTRACTION.");
+            System.out.println("Press 5 for exit.");
+
+            System.out.print("Plz ENTER your choice = ");
+            Scanner sc = new Scanner(System.in);
+            int choice = sc.nextInt();
+            switch(choice){
+                case 1:
+                    obj.multiplication();
+                    break;
+                case 2:
+                    obj.division();
+                    break;
+                case 3:
+                    obj.addition();
+                    break;
+                case 4:
+                    obj.substractiion();
+                    break;
+                case 5:
+                    System.exit(0);
+                default:
+                    System.out.println("Shi choice daal paagal......");
+            }
+        }
+    }
+}
